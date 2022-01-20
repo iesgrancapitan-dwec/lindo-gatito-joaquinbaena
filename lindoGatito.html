@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/Gato.js"></script>
+    <script src="js/main.js"></script>
+    <title>Lindo Gatito</title>
+</head>
+
+<body>
+    <noscript>Su navegador no puede ejecutar JavaScript.</noscript>
+    <h1>Gato</h1>
+    <form>
+        <label >Nombre: <input type="text" name="nombre" id="nombre" value="El pepe"></label><br><br>
+        <label>Peso: <input type="number" name="peso" id="peso" max="15" min="1" value="7"></label><br><br>
+        <label>Raza: <select name="raza" id="raza">
+            <option value="siames">siamés</option>
+            <option value="egipcio">egipcio</option>
+            <option value="persa" selected>persa</option>
+            <option value="coon">coon</option>
+        </select></label><br><br>
+        <label>Fecha nacimiento: <input type="date" name="nacimiento" id="nacimiento"></label><br><br>
+        <input type="button" value="Crear gato" id="crear">
+    </form>
+</body>
+
+</html>
