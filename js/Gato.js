@@ -9,17 +9,23 @@ function Gato(nombre, peso, edad, raza){
     this.raza = raza;
 }
 
+Gato.prototype.estado = function(){
+    if(this.peso < 1 || this.peso > 14){
+        return false;
+    }
+    return true;
+}
+
 Gato.prototype.hacerEjercicio = function(){
-    --this.peso;
-    if(this.peso < 1){
-        console.log("Su gato a muerto de inanición");
+    if(this.estado()){
+        --this.peso;
+        return true;
     }
 }
 
 Gato.prototype.comer = function(){
-    ++this.peso;
-    if(this.peso > 15){
-        console.log("Su gato a muerto de sobrepeso.");
+    if(this.estado()){
+        ++this.peso;
     }
 }
 
