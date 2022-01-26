@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <input type="button" value="Dormir" id="dormir">
                 <input type="button" value="Saber edad" id="edad">
             </form>
+            <h2></h2>
         </body>
         </html>`);
             ventana.document.close();

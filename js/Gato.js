@@ -10,7 +10,7 @@ function Gato(nombre, peso, edad, raza){
 }
 
 Gato.prototype.estado = function(){
-    if(this.peso < 1 || this.peso > 14){
+    if(this.peso < 1 || this.peso > 15){
         return false;
     }
     return true;
@@ -19,7 +19,6 @@ Gato.prototype.estado = function(){
 Gato.prototype.hacerEjercicio = function(){
     if(this.estado()){
         --this.peso;
-        return true;
     }
 }
 

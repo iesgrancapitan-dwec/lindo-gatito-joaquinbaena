@@ -7,24 +7,28 @@
         let peso = document.getElementById("peso");
         let edad = document.getElementById("edadDisplay");
         let foto = document.querySelector("img");
+        let mensajeMuerte = document.querySelector("h2");
         
         document.getElementById("comer").addEventListener("click",function(){
+            gato.comer();
             if(gato.estado()){
-                gato.comer();
                 foto.setAttribute("src", "img/comiendo.jpg")
                 peso.value = gato.peso;
             }else{
-                foto.setAttribute("src", "img/muerto.jpg")
+                foto.setAttribute("src", "img/muerto.jpg");
+                mensajeMuerte.innerHTML = `Su gato ${gato.nombre} ha muerto de sobrepeso`;
                 desabilitarBotones();
             }
         });
         document.getElementById("deporte").addEventListener("click",function(){
+            gato.hacerEjercicio();
             if(gato.estado()){
-                gato.hacerEjercicio();
-                foto.setAttribute("src", "img/jugar.jpg")
+                foto.setAttribute("src", "img/jugar.jpg");
                 peso.value = gato.peso;
             }else{
-                foto.setAttribute("src", "img/muerto.jpg")
+                foto.setAttribute("src", "img/muerto.jpg");
+                mensajeMuerte.innerHTML = `Su gato ${gato.nombre} ha muerto de inanición`;
+                desabilitarBotones();
             }
         });
         document.getElementById("edad").addEventListener("click",function(){
@@ -34,7 +38,7 @@
             edad.value = anio + " años";
         });
         document.getElementById("dormir").addEventListener("click",function(){
-            foto.setAttribute("src", "img/dormir.jpg")
+            foto.setAttribute("src", "img/dormir.jpg");
         });
 
         const desabilitarBotones = () => {
