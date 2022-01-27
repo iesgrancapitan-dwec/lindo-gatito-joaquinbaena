@@ -43,7 +43,7 @@
 
         const desabilitarBotones = () => {
             document.querySelectorAll("input").forEach(Element =>{
-                Element.disabled = true;
+                Element.disabled = true; 
             })
         }
     });
