@@ -35,17 +35,17 @@ document.addEventListener("DOMContentLoaded", function () {
             ventana.document.write(`
         <html>
         <head>
-            <title>${ventana.gato.getNombre()}</title>
+            <title>${ventana.gato.getNombre}</title>
             <script src="js/ventanagato.js"></script>
         </head>
         <body>
-            <h1>${ventana.gato.getNombre()}</h1>
+            <h1>${ventana.gato.getNombre}</h1>
             <img src="img/dormir.jpg" alt="gato" width="200px">
             <form>
-                <label >Nombre: <input type="text" readonly="true" value="${ventana.gato.getNombre()}" disabled></label><br><br>
-                <label>Peso: <input type="text" id="peso" readonly="true" value="${ventana.gato.getPeso()}" disabled></label><br><br>
-                <label>Raza: <input type="text" readonly="true" value="${ventana.gato.getRaza()}" disabled></label><br><br>
-                <label>Fecha nacimiento: <input type="text" id="nacimiento" readonly="true" disabled value="${ventana.gato.getEdad().split("-").reverse().join("/")}"></label><br><br>
+                <label >Nombre: <input type="text" readonly="true" value="${ventana.gato.getNombre}" disabled></label><br><br>
+                <label>Peso: <input type="text" id="peso" readonly="true" value="${ventana.gato.getPeso}" disabled></label><br><br>
+                <label>Raza: <input type="text" readonly="true" value="${ventana.gato.getRaza}" disabled></label><br><br>
+                <label>Fecha nacimiento: <input type="text" id="nacimiento" readonly="true" disabled value="${ventana.gato.getEdad.split("-").reverse().join("/")}"></label><br><br>
                 <label>Edad: <input type="text" id="edadDisplay" readonly="true" disabled></label><br><br>
                 <input type="button" value="Comer" id="comer">
                 <input type="button" value="Hacer deporte" id="deporte">

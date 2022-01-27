@@ -13,10 +13,10 @@
             gato.comer();
             if(gato.estado()){
                 foto.setAttribute("src", "img/comiendo.jpg")
-                peso.value = gato.peso;
+                peso.value = gato.getPeso;
             }else{
                 foto.setAttribute("src", "img/muerto.jpg");
-                mensajeMuerte.innerHTML = `Su gato ${gato.nombre} ha muerto de sobrepeso`;
+                mensajeMuerte.innerHTML = `Su gato ${gato.getNombre} ha muerto de sobrepeso`;
                 desabilitarBotones();
             }
         });
@@ -24,10 +24,10 @@
             gato.hacerEjercicio();
             if(gato.estado()){
                 foto.setAttribute("src", "img/jugar.jpg");
-                peso.value = gato.peso;
+                peso.value = gato.getPeso;
             }else{
                 foto.setAttribute("src", "img/muerto.jpg");
-                mensajeMuerte.innerHTML = `Su gato ${gato.nombre} ha muerto de inanición`;
+                mensajeMuerte.innerHTML = `Su gato ${gato.getNombre} ha muerto de inanición`;
                 desabilitarBotones();
             }
         });
